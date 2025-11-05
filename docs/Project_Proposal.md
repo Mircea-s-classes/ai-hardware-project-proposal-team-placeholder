@@ -11,36 +11,37 @@
 # AI Hardware Project Proposal Template
 
 ## 1. Project Title
-Name of the Team
+Team Placeholder
 
-List of students in the team
+Ziyu Xuan
 
-Provide a clear and concise title for your project. 
+Title: Detection and alarming of emergency status
 
 ## 2. Platform Selection
 Select one platform category and justify your choice.
-
-**Undergraduates:** Edge-AI, TinyML, or Neuromorphic platforms  
-**Graduates:** open-source AI accelerators (Ztachip, VTA, Gemmini, VeriGOOD-ML, NVDLA) or any of the above 
+We should use TinyML, the scenario may contain unwanted data, and processing them locally would
 
 ## 3. Problem Definition
-Describe the AI or hardware design problem you aim to address and its relevance to AI hardware (e.g., efficiency, latency, scalability).
+The emergency on ground by Monday is an alarming incident, so I thought why don't we use AI to automatically detect and send alarm to the security, in case there's danger for human to properly send alerts? The plan is to identify a specific sound, e.g. gunfire, train the AI with the data, and send them to the system.
 
 ## 4. Technical Objectives
-List 3–5 measurable objectives with quantitative targets when possible.
+1. Detection of emergency status, how likely is it to trigger with a single fire?
+2. Determine the signal/noise ratio which will trigger the alarm.
+3. Determine the latency of the system.
 
 ## 5. Methodology
-Describe your planned approach: hardware setup, software tools, model design, performance metrics, and validation strategy.
+We would implement a prototype in this project. First we need a microphone to collect ambient sound, then it is input to the hardware and TinyML to determine if there's an emergency, if there is then the alert is uploaded to the connected alarming system and send the alert. We need several datasets from different noises (footsteps, ambient music, chats etc.), ambient music, and different sounds of gunfire (or other sounds that is related to an emergency, for example someone yelling HELP!)
+There would certainly be fake alerts in this situation, so we need to filter the sound first. Due to the characteristic of the emergency sound it would likely be very loud compared to the noise, we would do an reduction and then get training.
 
 ## 6. Expected Deliverables
-List tangible outputs: working demo, GitHub repository, documentation, presentation slides, and final report.
+Working demo, GitHub repository, documentation, presentation slides, and final report.
 
 ## 7. Team Responsibilities
 List each member’s main role.
 
 | Name | Role | Responsibilities |
 |------|------|------------------|
-| [Student A] | Team Lead | Coordination, documentation |
+| Ziyu Xuan | Team Lead | Coordination, documentation |
 | [Student B] | Hardware | Setup, integration |
 | [Student C] | Software | Model training, inference |
 | [Student D] | Evaluation | Testing, benchmarking |
@@ -51,12 +52,12 @@ Provide expected milestones:
 | Week | Milestone | Deliverable |
 |------|------------|-------------|
 | 2 | Proposal | PDF + GitHub submission |
-| 4 | Midterm presentation | Slides, preliminary results |
+| 4 | Midterm presentation | Slides, preliminary results, example code |
 | 6 | Integration & testing | Working prototype |
 | Dec. 18 | Final presentation | Report, demo, GitHub archive |
 
 ## 9. Resources Required
-List special hardware, datasets, or compute access needed.
+We would probably need raspberry pi and a microphone for this project.
 
 ## 10. References
-Include relevant papers, repositories, and documentation.
+Not yet.
